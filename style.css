@@ -1,0 +1,906 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'winky-sans', 'Sriracha'
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    max-width: 1920px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.header {
+    background-size: cover;
+    width: 99.2vw;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    min-height: 100vh;
+    background: url(img/bgonmyoji1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+.header4 {
+    background: url(img/bgarknight1.jpg);
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+
+/*nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    font-size: 24px;
+}*/
+
+/*nav a {
+    color: white;
+    text-decoration: none;
+}*/
+
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    bottom: 0;
+    left: 50%;
+    transition: all 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.8rem;
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+.nav-link, .drop-down li {
+    list-style: none;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+.drop-down {
+    position: absolute;
+    padding: 0.5rem 0;
+    margin: 0.5rem -0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    font-size: 16px;
+    display: none;
+}
+
+.nav-link:hover {
+    /*background-color: #ffda79;*/
+    color: #ffffff;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.services:hover .drop-down {
+    display: block;
+}
+
+.services a {
+    display: flex;
+    /*align-items: center;*/
+    top: -0.27rem;
+}
+
+.services .dropdown-icon {
+    font-size: 18px;
+    position: relative;
+    top: 0.3rem;
+    right: -5px;
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out all;
+}
+
+.services:hover .dropdown-icon {
+    transform: rotate(180deg);
+    top: -0.3rem;
+}
+
+.drop-down li:hover {
+    /*background: black;*/
+    color: #8d8c8c;
+    border-radius: 0.5rem;
+}
+
+
+
+
+
+
+
+/*.logo a {
+    font-size: 28px;
+}*/
+
+.header-info {
+    margin-top: 10rem;
+    width: 500px;
+}
+
+.header-info h3 {
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+.header-btn button {
+    margin-top: 5rem;
+    padding: 0.5rem;
+    width: 150px;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 10px;
+}
+
+.news {
+    background-color: rgb(243, 237, 237);
+    color: black;
+    text-align: center;
+    padding: 1rem;
+}
+
+.news-info {
+    /*font-weight: lighter;*/
+    font-size: 3rem;
+    margin-left: 4rem;
+    padding: 5rem;
+}
+
+.news-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    border-radius: 10px;
+    margin-top: -1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding: 1rem;
+
+}
+
+.news-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+    
+ 
+}
+
+
+
+.news-box-title {
+    padding: 0.5rem;
+}
+
+.news-box-title a {
+    color: black;
+}
+
+/*.contact {
+    background: url(img/bghonkaistarrail1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: 8%;
+    height: 250px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}*/
+
+
+/*footer {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 1rem;
+}*/
+
+.footer-menu {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 0px solid white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 11.8rem;
+}
+
+.footer-menu a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer-menu li {
+    margin-right: 1rem;
+}
+
+.footer-menu ul li a {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -0.15rem;
+    font-size: 20px;
+}
+
+
+
+
+/*body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(img/bgonmyoji1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}*/
+.slider {
+    width: 99.2vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+.slider figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    animation: fade 20s infinite;
+    opacity: 0;
+}
+
+.slider figure:nth-child(1) {
+    background-image: url(img/bgoverlord1.jpg);
+    animation-delay: 0s;
+}
+
+.slider figure:nth-child(2) {
+    background-image: url(img/bgonmyoji1.jpg);
+    animation-delay: -4s;
+}
+
+.slider figure:nth-child(3) {
+    background-image: url(img/bghonkaistarrail1.jpg);
+    animation-delay: -8s;
+}
+
+.slider figure:nth-child(4) {
+    background-image: url(img/bgbluearchive1.jpg);
+    animation-delay: -12s;
+}
+
+.slider figure:nth-child(5) {
+    background-image: url(img/bgarknight1.jpg);
+    animation-delay: -16s;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    25% { opacity: 1; }
+    30% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+
+.contact {
+    background: url(img/bgonmyoji1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: -110%;
+    height: 250px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.contact-title {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 1px;
+    color: white;
+}
+
+.contact-title h3 {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+
+.slider-contact {
+    width: 99.2vw;
+    height:250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-contact figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    animation: fade 20s infinite;
+    opacity: 0;
+}
+
+.slider-contact figure:nth-child(1) {
+    background-image: url(img/bgoverlord1.jpg);
+    background-position-y: 20%;
+    animation-delay: 0s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-contact figure:nth-child(2) {
+    background-image: url(img/bgonmyoji1.jpg);
+    background-position-y: -110%;
+    animation-delay: -4s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-contact figure:nth-child(3) {
+    background-image: url(img/bghonkaistarrail1.jpg);
+    background-position-y: 8%;
+    animation-delay: -8s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-contact figure:nth-child(4) {
+    background-image: url(img/bgbluearchive1.jpg);
+    background-position-y: 8%;
+    animation-delay: -12s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-contact figure:nth-child(5) {
+    background-image: url(img/bgarknight1.jpg);
+    background-position-y: 25%;
+    animation-delay: -16s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.home-news {
+    background: url(img/bgonmyoji1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: -140%;
+    height: 400px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contact-news {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 1px;
+    color: white;
+}
+
+.contact-news h3 {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+
+.slider-news {
+    width: 99.2vw;
+    height:400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+
+}
+
+.slider-news figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    animation: fade 20s infinite;
+    opacity: 0;
+}
+
+.slider-news figure:nth-child(1) {
+    background-image: url(img/bgoverlord1.jpg);
+    background-position-y: 20%;
+    animation-delay: 0s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-news figure:nth-child(2) {
+    background-image: url(img/bgonmyoji1.jpg);
+    background-position-y: -140%;
+    animation-delay: -4s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-news figure:nth-child(3) {
+    background-image: url(img/bghonkaistarrail1.jpg);
+    background-position-y: 8%;
+    animation-delay: -8s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-news figure:nth-child(4) {
+    background-image: url(img/bgbluearchive1.jpg);
+    background-position-y: 8%;
+    animation-delay: -12s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-news figure:nth-child(5) {
+    background-image: url(img/bgarknight1.jpg);
+    background-position-y: 25%;
+    animation-delay: -16s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.footer-menu-news {
+    padding: 0rem;
+    border-radius: 5px;
+    border: 0px solid white;
+    display: flex;
+    justify-content: center;
+    margin-top: 11.8rem;
+    font-size: 50px;
+    margin-top: 12rem;
+}
+
+.footer-menu-news a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/*.home-lord-of-nazarick {
+    background: url(img/bgoverlord1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: -140%;
+    height: 400px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}*/
+
+.header1 {
+    background: url(img/bgoverlord1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: -140%;
+    height: 400px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.slider-lord-of-nazarick {
+    width: 99.2vw;
+    height:400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.slider-lord-of-nazarick figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    animation: fade 20s infinite;
+    opacity: 0;
+}
+
+.slider-lord-of-nazarick figure:nth-child(1) {
+    background-image: url(img/bgoverlord1.jpg);
+    background-position-y: 20%;
+    animation-delay: 0s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-lord-of-nazarick figure:nth-child(2) {
+    background-image: url(img/bgoverlord2.jpg);
+    background-position-y: 10%;
+    animation-delay: -4s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-lord-of-nazarick figure:nth-child(3) {
+    background-image: url(img/bgoverlord3.jpg);
+    background-position-y: 4%;
+    animation-delay: -8s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-lord-of-nazarick figure:nth-child(4) {
+    background-image: url(img/bgoverlord4.jpg);
+    background-position-y: 35%;
+    animation-delay: -12s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-lord-of-nazarick figure:nth-child(5) {
+    background-image: url(img/bgoverlord5.jpg);
+    background-position-y: 2%;
+    animation-delay: -16s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.footer-menu-lord-of-nazarick {
+    padding: 0rem;
+    border-radius: 5px;
+    border: 0px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    margin-top: 11.8rem;
+    font-size: 50px;
+    margin-top: 12rem;
+}
+
+.footer-menu-lord-of-nazarick a {
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+
+.header2 {
+    background: url(img/bgonmyoji1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: -140%;
+    height: 400px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.slider-onmyoji {
+    width: 99.2vw;
+    height:400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+
+}
+
+.slider-onmyoji figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    animation: fade 20s infinite;
+    opacity: 0;
+}
+
+.slider-onmyoji figure:nth-child(1) {
+    background-image: url(img/bgonmyoji1.jpg);
+    background-position-y: 20%;
+    animation-delay: 0s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-onmyoji figure:nth-child(2) {
+    background-image: url(img/bgonmyoji2.jpg);
+    background-position-y: 4%;
+    animation-delay: -4s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-onmyoji figure:nth-child(3) {
+    background-image: url(img/bgonmyoji3.jpg);
+    background-position-y: 40%;
+    animation-delay: -8s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-onmyoji figure:nth-child(4) {
+    background-image: url(img/bgonmyoji4.jpg);
+    background-position-y: 40%;
+    animation-delay: -12s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-onmyoji figure:nth-child(5) {
+    background-image: url(img/bgonmyoji5.jpg);
+    background-position-y: 25%;
+    animation-delay: -16s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.footer-menu-onmyoji {
+    padding: 0rem;
+    border-radius: 5px;
+    border: 0px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    margin-top: 11.8rem;
+    font-size: 50px;
+    margin-top: 12rem;
+}
+
+.footer-menu-onmyoji a {
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+
+.header3 {
+    background: url(img/bghonkaistarrail1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: -140%;
+    height: 400px;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.slider-honkai_star_rail {
+    width: 99.2vw;
+    height:400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.slider-honkai_star_rail figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    animation: fade 20s infinite;
+    opacity: 0;
+}
+
+.slider-honkai_star_rail figure:nth-child(1) {
+    background-image: url(img/bghonkaistarrail1.jpg);
+    background-position-y: 10%;
+    animation-delay: 0s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-honkai_star_rail figure:nth-child(2) {
+    background-image: url(img/bghonkaistarrail2.jpg);
+    background-position-y: 20%;
+    animation-delay: -4s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-honkai_star_rail figure:nth-child(3) {
+    background-image: url(img/bghonkaistarrail3.jpg);
+    background-position-y: 55%;
+    animation-delay: -8s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-honkai_star_rail figure:nth-child(4) {
+    background-image: url(img/bghonkaistarrail4.jpg);
+    background-position-y: 5%;
+    animation-delay: -12s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-honkai_star_rail figure:nth-child(5) {
+    background-image: url(img/bghonkaistarrail5.jpg);
+    background-position-y: 35%;
+    animation-delay: -16s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.footer-menu-honkai_star_rail {
+    padding: 0rem;
+    border-radius: 5px;
+    border: 0px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    margin-top: 11.8rem;
+    font-size: 50px;
+    margin-top: 12rem;
+}
+
+.footer-menu-honkai_star_rail a {
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+
+.slider-news1 {
+    width: 99.8vw;
+    height:950px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+
+}
+
+.slider-news1 figure {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    animation: fade 20s infinite;
+    opacity: 0;
+}
+
+.slider-news1 figure:nth-child(1) {
+    background-image: url(img/bgoverlord1.jpg);
+    background-position-y: 20%;
+    animation-delay: 0s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-news1 figure:nth-child(2) {
+    background-image: url(img/bgonmyoji1.jpg);
+    /*background-position-y: -140%;*/
+    animation-delay: -4s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-news1 figure:nth-child(3) {
+    background-image: url(img/bghonkaistarrail1.jpg);
+    background-position-y: 8%;
+    animation-delay: -8s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-news1 figure:nth-child(4) {
+    background-image: url(img/bgbluearchive1.jpg);
+    background-position-y: 8%;
+    animation-delay: -12s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.slider-news1 figure:nth-child(5) {
+    background-image: url(img/bgarknight1.jpg);
+    background-position-y: 25%;
+    animation-delay: -16s;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.logout_btn {
+    background: skyblue;
+    color: #000000;
+    padding: 10px;
+    border-radius: 14px;
+}
+
+
