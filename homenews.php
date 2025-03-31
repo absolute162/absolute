@@ -6,12 +6,12 @@ require_once 'config/db.php';
 include('session.php');
 
 
-$servername = "sql210.infinityfree.com";
-$username = "if0_38638378";
-$password = "AkenjgX5Jyz";
+$servername = "localhost";
+$username = "root";
+$password = "";
 
 try {
-  $conn = new PDO("mysql:host=$servername;dbname=if0_38638378_absolute", $username, $password);
+  $conn = new PDO("mysql:host=$servername;dbname=adminsystem", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   // echo "Connected successfully";
